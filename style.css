@@ -1,0 +1,132 @@
+#contentContainer{
+    width:25vw;
+    background-color: #F6F6F4;
+/*    border:1px solid #9CB437;*/
+
+}
+
+#flexContainer{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#extra{
+    height: 11vh;
+    background-color: white;
+}
+
+p{
+    color:grey;
+    font-style: italic;
+    margin-top:0px !important;
+    margin-left:10px;
+    font-size: 80%;
+    opacity:0.5    
+}
+
+h6{
+    margin-top: 10px;
+    margin-left:10px;
+}
+
+#arrow_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#arrow{
+    width:7px;
+    height:7px;
+    border-top: 2px solid #9CB437;
+    border-left: 2px solid #9CB437;
+    transform: rotate(45deg)
+}
+
+input{
+    vertical-align: -2px;
+}
+
+#all_div{
+    border-bottom: 1px solid #9CB437;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* NOW, TO STYLE THE CHECKBOXES */
+
+/*the following hides the default checkbox*/
+.checkbox input[type=checkbox] {
+    opacity: 0;
+}
+
+/* in order to position the checkbox and the checkmarks relative to the label*/
+.checkbox label {
+    position: relative;
+}
+
+/* the following creates the outer box */
+/* it's a ::before pseudo-element ( first child of the selected element, .checkbox label ); to appear as a box it is displayed as inline-block, with width and height */
+	/*#E2E2E0;*/
+
+.checkbox label::before{
+    content: ""; /* it's required to make the element visible*/
+    display: inline-block; 
+    height: 24px;
+    width: 24px;  
+    border: 1px solid #E2E2E0;
+    /*position the box*/
+    top: 3px;
+}
+
+/* the following creates the checkmark*/
+/* it's an ::after pseudo element (last child of the selected element); diplayed as inline-block, rotation of 45 deg*/
+.checkbox label::after{
+    content: "";
+    display: inline-block;
+    height:9px;
+    width:12px;
+    border-left: 3px solid #9CB437;
+    border-bottom: 3px solid #9CB437;
+    transform: rotate(-45deg);
+    /* position the checkmark*/
+    left: 6px;
+    top: 8px;  
+}
+
+/* set the position of both ::before and ::after to "absolute"*/
+.checkbox label::before,
+.checkbox label::after {
+    position: absolute;
+}
+/* the following positions the div with the name of the items */
+.names{
+    margin-left:40px;
+    margin-top: 2px;
+}
+
+/* now toggle the checkmark based on the checkbox state*/
+
+/*Hide the checkmark by default*/
+.checkbox input[type="checkbox"] + label::after {
+    content: none;
+}
+
+/*!! clicking on the label I activate the checkbox*/
+/* the :checked status of the input checkbox is used to make the ::after element appear, with "+" (adjacent sibling combinator)*/
+.checkbox input[type="checkbox"]:checked + label::after {
+    content: "";
+}
+
+/* I also want to change the outer box border */
+.checkbox input[type="checkbox"]:checked + label::before {
+    border: 1px solid #9CB437;
+}
+
+
+
+
