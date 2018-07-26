@@ -122,7 +122,7 @@ input{
     content: "";
 }
 
-/* I also want to change the outer box border */
+/* I also want to change the outer box border when it's activated */
 .checkbox input[type="checkbox"]:checked + label::before {
     border: 1px solid #9CB437;
 }
