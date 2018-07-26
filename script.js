@@ -5,8 +5,10 @@
 $("#allCheck").click(function() {
     // iterate through the "normCheck" collection; if "All" is checked, check the current element; otherwise uncheck it 
     $("input[class=normCheck]").each(function(){
-        if($("#allCheck").prop("checked") == true)
-        $(this).prop("checked", true);
+        if($("#allCheck").prop("checked") == true){
+            $(this).prop("checked", true);
+
+        }
         else{
             $(this).prop("checked", false);
         }
