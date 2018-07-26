@@ -7,7 +7,6 @@ $("#allCheck").click(function() {
     $("input[class=normCheck]").each(function(){
         if($("#allCheck").prop("checked") == true){
             $(this).prop("checked", true);
-
         }
         else{
             $(this).prop("checked", false);

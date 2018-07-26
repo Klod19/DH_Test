@@ -1,3 +1,12 @@
+#flexContainer{
+    width: 100vw;
+    height: 100vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #contentContainer{
     width:25vw;
     background-color: #F6F6F4;
@@ -5,33 +14,29 @@
 
 }
 
-#flexContainer{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
 #extra{
     height: 11vh;
+    
     background-color: white;
-}
-
-p{
-    color:grey;
-    font-style: italic;
-    margin-top:0px !important;
-    margin-left:10px;
-    font-size: 80%;
-    opacity:0.5    
 }
 
 h6{
     margin-top: 10px;
     margin-left:10px;
 }
+
+p{
+    color:grey;
+    font-style: italic;
+    font-size: 80%;
+    opacity:0.5;
+    
+    margin-top:0px !important;
+    margin-left:10px;
+    
+ 
+}
+
 
 #arrow_container{
     display: flex;
@@ -42,14 +47,18 @@ h6{
 #arrow{
     width:7px;
     height:7px;
+    
     border-top: 2px solid #9CB437;
     border-left: 2px solid #9CB437;
+    
     transform: rotate(45deg)
 }
 
+/*
 input{
     vertical-align: -2px;
 }
+*/
 
 #all_div{
     border-bottom: 1px solid #9CB437;
@@ -71,14 +80,16 @@ input{
 
 /* the following creates the outer box */
 /* it's a ::before pseudo-element ( first child of the selected element, .checkbox label ); to appear as a box it is displayed as inline-block, with width and height */
-	/*#E2E2E0;*/
 
 .checkbox label::before{
     content: ""; /* it's required to make the element visible*/
     display: inline-block; 
+    
     height: 24px;
-    width: 24px;  
+    width: 24px; 
+    
     border: 1px solid #E2E2E0;
+    
     /*position the box*/
     top: 3px;
 }
@@ -88,11 +99,15 @@ input{
 .checkbox label::after{
     content: "";
     display: inline-block;
+    
     height:9px;
     width:12px;
+    
     border-left: 3px solid #9CB437;
     border-bottom: 3px solid #9CB437;
+    
     transform: rotate(-45deg);
+    
     /* position the checkmark*/
     left: 6px;
     top: 8px;  
